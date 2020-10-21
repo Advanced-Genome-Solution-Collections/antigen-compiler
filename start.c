@@ -7,9 +7,14 @@
 #include <stdlib.h>
 
 
+
+void swapint(int *num1, int *num2);
+
+
+
 int main(int argc, char *argv[])
 {
-	printf("You entered %s", argv[1]);
+	printf("You entered %s\n", argv[1]);
 	return 0;
 }
 
@@ -17,7 +22,7 @@ int main(int argc, char *argv[])
 
 
 
-void swap (int *num1, int *num2) {
+void swapint(int *num1, int *num2) {
   int temp;
 
   temp = *num1;
