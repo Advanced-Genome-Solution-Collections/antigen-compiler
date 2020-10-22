@@ -12,7 +12,7 @@
 void swapint(int *num1, int *num2);
 typedef u_int8_t uint8_t;
 void usage() {
-	printf("usage: gc <file>");
+	printf("usage: gc <file>\n");
 	exit (1);
 }
 
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 		usage();
 	}
 
-	char code[20] = load_file(argv[1]);
+	//char code[20] = load_file(argv[1]);
 
 	return 0;
 }
