@@ -9,11 +9,20 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+#define NAME "./a.out"
+#define MAXCHAR 1000
+
+
 void swapint(int *num1, int *num2);
 typedef u_int8_t uint8_t;
 
-void filecheck(char file[255])
+
+
+
+char* fileread(char file[255])
 {
+
+	char str[MAXCHAR];
 	FILE *f = fopen(file, "r");
 	if (f == NULL)
 	{
@@ -23,15 +32,19 @@ void filecheck(char file[255])
 	else
 	{
 		printf("could open %s\n", file);
-
-
-
-
 	}
+
+	while (fgets(str, MAXCHAR, f) != NULL)
+		printf("%s", str);
+	fclose(f);
+	char *ret = malloc(MAXCHAR);
+	return (ret);
+
+
 }
 
 void usage() {
-	printf("usage: ante <file>\n");
+	printf("usage: %s <file>\n", NAME);
 	exit (1);
 }
 
@@ -49,7 +62,7 @@ int main(int argc, char *argv[])
 	}
 
 	//char code[20] = load_file(argv[1]);
-	filecheck(argv[1]);
+	fileread(argv[1]);
 	return 0;
 }
 
