@@ -20,11 +20,18 @@ void filecheck(char file[255])
 		printf("File wouldn't open\n");
 
 	}
+	else
+	{
+		printf("could open %s\n", file);
 
+
+
+
+	}
 }
 
 void usage() {
-	printf("usage: gc <file>\n");
+	printf("usage: ante <file>\n");
 	exit (1);
 }
 
