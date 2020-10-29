@@ -31,11 +31,15 @@ char* fileread(char file[255])
 	}
 	else
 	{
-		printf("could open %s\n", file);
+		printf("opening... %s\n", file);
 	}
-
-	while (fgets(str, MAXCHAR, f) != NULL)
-		printf("%s", str);
+	if (f != NULL)
+	{
+		while (fgets(str, MAXCHAR, f) != NULL)
+		{
+			printf("%s", str);
+		}
+	}
 	fclose(f);
 	char *ret = malloc(MAXCHAR);
 	return (ret);
