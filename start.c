@@ -31,7 +31,7 @@ char* fileread(char file[255])
 	}
 	else
 	{
-		printf("opening... %s\n", file);
+		printf("opening %s... \n", file);
 	}
 	if (f != NULL)
 	{
