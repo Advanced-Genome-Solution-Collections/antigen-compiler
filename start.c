@@ -9,7 +9,6 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
-#define NAME "./a.out"
 #define MAXCHAR 1000
 
 
@@ -47,8 +46,8 @@ char* fileread(char file[255])
 
 }
 
-void usage() {
-	printf("usage: %s <file>\n", NAME);
+void usage(char argv[1]) {
+	printf("usage: %s <file>\n", argv);
 	exit (1);
 }
 
@@ -62,7 +61,7 @@ int main(int argc, char *argv[])
 
 
 	if (argc != 2) {
-		usage();
+		usage(argv[0]);
 	}
 
 	//char code[20] = load_file(argv[1]);
