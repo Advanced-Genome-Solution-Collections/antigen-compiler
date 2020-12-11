@@ -39,7 +39,11 @@ char* fileread(char file[255])
 			printf("%s", str);
 		}
 	}
-	fclose(f);
+	if (f != NULL){
+		fclose(f);
+
+	}
+
 	char *ret = malloc(MAXCHAR);
 	return (ret);
 
