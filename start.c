@@ -21,7 +21,7 @@ char* fileread(char file[255])
 	FILE *f = fopen(file, "r");
 	if (f == NULL)
 	{
-		printf("The file wouldn't open. The file may either not exist, or have an incorrect path.\n");
+		printf("Your file wouldn't open. The file may either not exist, or have an incorrect path.\n");
 
 	}
 	else
